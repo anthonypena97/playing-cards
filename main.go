@@ -15,7 +15,12 @@ func main() {
 	cards := []string{"Ace of Diamonds", newCard()}
 	cards = append(cards, "Six of Spades")
 
-	fmt.Println(cards)
+	// iterating over a closed set
+	for i, card := range cards {
+		fmt.Println(i, card)
+	}
+
+	// fmt.Println(cards)
 
 }
 
