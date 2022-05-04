@@ -33,3 +33,10 @@ func (d deck) print() {
 	}
 
 }
+
+// the second paranthesis are the two types we will be retrning
+func deal(d deck, handSize int) (deck, deck) {
+
+	return d[:handSize], d[handSize:]
+
+}
