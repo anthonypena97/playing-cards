@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"io/ioutil"
+	"os"
 	"strings"
 )
 
@@ -11,9 +12,7 @@ import (
 type deck []string
 
 func newDeck() deck {
-
 	cards := deck{}
-
 	cardSuits := []string{"Spades", "Diamonds", "Hearts", "Clubs"}
 	cardValues := []string{"Ace", "Two", "Three", "Four"}
 
@@ -40,19 +39,24 @@ func (d deck) print() {
 
 // the second paranthesis are the two types we will be retrning
 func deal(d deck, handSize int) (deck, deck) {
-
 	return d[:handSize], d[handSize:]
-
 }
 
 func (d deck) toString() string {
-
 	return strings.Join([]string(d), ", ")
-
 }
 
 func (d deck) saveToFile(filename string) error {
-
 	return ioutil.WriteFile(filename, []byte(d.toString()), 0666)
+}
 
+func newDeckFromFile(filename string) deck {
+	bs, err := ioutil.ReadFile(filename)
+	if err != nil {
+		fmt.Println("Error:", err)
+		os.Exit(1)
+	}
+
+	s := strings.Split(string(bs), ", ")
+	return deck(s)
 }
