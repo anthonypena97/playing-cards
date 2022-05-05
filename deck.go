@@ -9,6 +9,8 @@ import (
 	"time"
 )
 
+//lint:file-ignore U1000 Ignore all unused code, it's generated
+
 // Create a new type of 'deck'
 // which is a slice of string
 type deck []string
