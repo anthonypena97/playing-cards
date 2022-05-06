@@ -33,7 +33,7 @@ To install:
 - open terminal in application root directory
 - enter,`go run main.go deck.go`
 
-* a deck of 16 cards randomly shuffled shall be printed to the console *
+*a deck of 16 cards randomly shuffled shall be printed to the console*
 
 ## Notes
 
@@ -48,7 +48,7 @@ To run tests:
 - after installation, open terminal in application root directory
 - enter, `go test`
 
-* a pass or fail message will be printed to terminal console*
+*a pass or fail message will be printed to terminal console*
 
 ## License
 
