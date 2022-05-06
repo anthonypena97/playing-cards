@@ -6,7 +6,13 @@
 <p> ---------------------------------------- </p>
 Program for simulating playing with a deck of cards. Written in Go.
 
-The following Go Standard Library packages are imported: fmt, io/ioutil, math/rand, os, strings, and time
+The following Go Standard Library packages are imported: 
+- fmt 
+- io/ioutil 
+- math/rand 
+- os 
+- strings 
+- time
 
 ## Table of Contents
 
